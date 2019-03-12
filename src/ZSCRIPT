@@ -1,0 +1,4 @@
+// ZSCRIPT INCLUDES
+//
+#include "script/dndweapon.zsc"
+#include "script/playerclasses.zsc"

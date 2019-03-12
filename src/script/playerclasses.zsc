@@ -1,0 +1,30 @@
+Class DNDebugPlayer : DoomPlayer {
+	PlayerInfo player;
+	
+	default {
+		/* debug stuff */
+		//Player.StartItem "Pistol";
+		Player.StartItem "Heckler";
+		//Player.StartItem "Fist";
+		Player.StartItem "Clip", 999;
+		Player.DisplayName "Debug Guy";
+		
+		//Player.ViewBob 0.5;
+	}
+
+	override void PostBeginPlay() {
+		player = players[consoleplayer];
+		super.PostBeginPlay();
+	}	
+	
+	/*
+	override void Tick() {
+		if (player && testGasShader) {
+			Shader.SetUniform1f(player, "TearGas", "mf_time", (level.totaltime / 35.0));
+			Shader.SetEnabled(player, "TearGas", true);
+		}
+		super.Tick();
+	}
+	*/
+}
+//eof
