@@ -8,3 +8,5 @@ misc/oof DSOOF
 misc/dry NOAMO
 // Heckler
 weapons/HecklerFire HeckF
+weapons/HecklerMagIn HKRLI
+weapons/HecklerMagOut HKRLO
