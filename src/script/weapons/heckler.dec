@@ -5,7 +5,7 @@ actor Heckler : Weapon {
 	weapon.selectionorder 1800
 	obituary "%o eat bullet from %k's Heckler."
 	inventory.pickupmessage "You got the Heckler sub-machinegun!"
-	weapon.kickback 1000
+	weapon.kickback 100
 	weapon.ammotype1 "Clip"
 	weapon.ammouse1 1
 	weapon.ammogive1 15
