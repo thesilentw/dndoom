@@ -2,3 +2,4 @@
 //
 #include "script/dndweapon.zsc"
 #include "script/playerclasses.zsc"
+#include "script/weapons/zsheckler.zsc"

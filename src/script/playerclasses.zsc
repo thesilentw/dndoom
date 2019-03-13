@@ -4,7 +4,8 @@ Class DNDebugPlayer : DoomPlayer {
 	default {
 		/* debug stuff */
 		//Player.StartItem "Pistol";
-		Player.StartItem "Heckler";
+		//Player.StartItem "Heckler";
+		Player.StartItem "ZSHeckler";
 		//Player.StartItem "Fist";
 		Player.StartItem "Clip", 999;
 		Player.DisplayName "Debug Guy";

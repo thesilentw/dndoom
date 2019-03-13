@@ -9,54 +9,54 @@ actor Heckler : Weapon {
 	weapon.ammotype1 "Clip"
 	weapon.ammouse1 1
 	weapon.ammogive1 15
-	AttackSound "weapons/Heckler" //CS1.6 UMP45 Sound
+	AttackSound "weapons/HecklerFire" //CS1.6 UMP45 Sound
 	
 	states {
 		Spawn:
-			HECK A -1
+			HECP A -1
 			Stop
 		Ready:
-			HECK B 1 A_WeaponReady
+			HECK A 1 A_WeaponReady
 			Loop
 		Select:
-			HECK B 1 A_Raise
+			HECK A 1 A_Raise
 			Loop
 		Deselect:
-			HECK B 1 A_Lower
+			HECK A 1 A_Lower
 			Loop
 		Fire:
-			HECK B 1 A_GunFlash
-			HECK B 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
-			HECK B 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE)
-			HECK B 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE)
-			HECK B 1 A_GunFlash
-			HECK B 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
-			HECK B 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE)
-			HECK B 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE)
-			HECK B 1 A_GunFlash
-			HECK B 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
-			HECK B 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE)
-			HECK B 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE)
-			HECK B 1 A_GunFlash
-			HECK B 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
-			HECK B 1 A_WeaponOffset(0, 40, WOF_INTERPOLATE)
-			HECK B 1 A_WeaponOffset(0, 48, WOF_INTERPOLATE)
-			HECK B 1 A_WeaponOffset(0, 44, WOF_INTERPOLATE)
-			HECK B 2 A_WeaponOffset(0, 40, WOF_INTERPOLATE)
-			HECK B 2 A_WeaponOffset(0, 37, WOF_INTERPOLATE)
-			HECK B 3 A_WeaponOffset(0, 35, WOF_INTERPOLATE)
+			HECK A 1 A_GunFlash
+			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
+			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE)
+			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE)
+			HECK A 1 A_GunFlash
+			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
+			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE)
+			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE)
+			HECK A 1 A_GunFlash
+			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
+			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE)
+			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE)
+			HECK A 1 A_GunFlash
+			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1)
+			HECK A 1 A_WeaponOffset(0, 40, WOF_INTERPOLATE)
+			HECK A 1 A_WeaponOffset(0, 48, WOF_INTERPOLATE)
+			HECK A 1 A_WeaponOffset(0, 44, WOF_INTERPOLATE)
+			HECK A 2 A_WeaponOffset(0, 40, WOF_INTERPOLATE)
+			HECK A 2 A_WeaponOffset(0, 37, WOF_INTERPOLATE)
+			HECK A 3 A_WeaponOffset(0, 35, WOF_INTERPOLATE)
 			//Reload animation WIP
+			HECK B 2
+			HECK C 2
 			HECK D 2
 			HECK E 2
 			HECK F 2
 			HECK G 2
 			HECK H 2
-			HECK I 2
-			HECK J 2
-			HECK K 2 
+			HECK I 2 
 			Goto Ready
 		Flash:
-			HECK C 2 BRIGHT A_Light2
+			HECF A 2 BRIGHT A_Light2
 			//HECK C 1 A_Light0
 			Goto LightDone
 	}
