@@ -1,12 +1,16 @@
-//===========================================================================
-//
 // SNDINFO
 //
-//===========================================================================
 //
 misc/oof DSOOF
 misc/dry NOAMO
 // Heckler
-weapons/HecklerFire HeckF
-weapons/HecklerMagIn HKRLI
-weapons/HecklerMagOut HKRLO
+weapons/HecklerFire 		HeckF
+weapons/HecklerMagIn 		HKRLI
+weapons/HecklerMagOut		HKRLO
+// Shorty
+weapons/ShortyFire			"sounds/shorty/supershorty.wav"
+weapons/ShortyPumpDown		"sounds/shorty/9mmslidepull.wav"
+weapons/ShortyPumpUp		"sounds/shorty/9mmsliderelease.wav"
+weapons/ShortyShellIn	"sounds/shorty/db-shellsin.wav"
+
+//eof

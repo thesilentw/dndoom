@@ -9,8 +9,10 @@ Class DNDebugPlayer : DoomPlayer {
 		//Player.StartItem "Pistol";
 		//Player.StartItem "Heckler";
 		Player.StartItem "TestGun";
+		Player.StartItem "Shorty";
 		//Player.StartItem "Fist";
 		Player.StartItem "Clip", 999;
+		Player.StartItem "Shell", 999;
 		Player.DisplayName "Debug Guy";
 		DNDebugPlayer.meleeCooldown 0;
 		

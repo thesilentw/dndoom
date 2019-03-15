@@ -1,5 +1,11 @@
-Dryfire:
+Generic Dryfire:
 MagamaCow
 
+Heckler Fire:
+CS1.6
+
 Heckler Reload Sounds:
+MagmaCow
+
+Shorty Reload/ Fire sounds:
 MagmaCow
