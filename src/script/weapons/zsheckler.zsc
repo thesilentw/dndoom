@@ -46,9 +46,12 @@ Class ZSHeckler : DNDWeapon {
 				}
 				return ResolveState(Null);
 			}
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE);
 			TNT1 A 0 A_ReFire("InitialBurst");
@@ -72,9 +75,12 @@ Class ZSHeckler : DNDWeapon {
 				}
 				return ResolveState(Null);
 			}
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE);
 			HECK A 1 {
@@ -84,9 +90,12 @@ Class ZSHeckler : DNDWeapon {
 				return ResolveState(Null);
 			}
 			//
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE);
 			TNT1 A 0 {
@@ -96,9 +105,12 @@ Class ZSHeckler : DNDWeapon {
 				return ResolveState(Null);
 			}
 			//
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(0, 40, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(0, 48, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(0, 44, WOF_INTERPOLATE);
@@ -114,9 +126,12 @@ Class ZSHeckler : DNDWeapon {
 				}
 				return ResolveState(Null);
 			}
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE);
 			TNT1 A 0 {
@@ -125,9 +140,12 @@ Class ZSHeckler : DNDWeapon {
 				}
 				return ResolveState(Null);
 			}
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE);
 			TNT1 A 0 {
@@ -137,9 +155,12 @@ Class ZSHeckler : DNDWeapon {
 				return ResolveState(Null);
 			}
 			//
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(6, 42, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(5, 40, WOF_INTERPOLATE);
 			TNT1 A 0 {
@@ -149,9 +170,12 @@ Class ZSHeckler : DNDWeapon {
 				return ResolveState(Null);
 			}
 			//
-			HECK A 1 A_GunFlash();
-			HECK A 1 A_FireBullets(1, 1, 1, 4, "BulletPuff", 1);
-			TNT1 A 0 A_TakeInventory("HecklerMag", 1);
+			HECK A 2 {
+				A_GunFlash();
+				A_PlaySound("weapons/HecklerFire", CHAN_WEAPON);
+				A_FireProjectile("BaseBullet", useammo: true, spawnofs_xy: 3.8);
+				A_TakeInventory("HecklerMag", 1);
+			}
 			HECK A 1 A_WeaponOffset(0, 40, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(0, 48, WOF_INTERPOLATE);
 			HECK A 1 A_WeaponOffset(0, 44, WOF_INTERPOLATE);
