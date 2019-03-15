@@ -116,5 +116,17 @@ Class DNDWeapon : DoomWeapon {
 		Spawn:
 			TLGL A -1;
 			Stop;
+		MeleeHide:
+			SHTG A 25 {
+				A_WeaponReady(WRF_NOBOB);
+				A_WeaponOffset(0, 60, WOF_INTERPOLATE);
+			}
+			Goto Ready;
+		MeleeUnHide:
+			SHTG A 25 {
+				A_WeaponReady(WRF_NOBOB);
+				A_WeaponOffset(0, 32, WOF_INTERPOLATE);
+			}
+			Goto Ready;
 	}
 }

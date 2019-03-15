@@ -8,7 +8,7 @@ Class DNDebugPlayer : DoomPlayer {
 		/* debug stuff */
 		//Player.StartItem "Pistol";
 		//Player.StartItem "Heckler";
-		Player.StartItem "ZSHeckler";
+		Player.StartItem "TestGun";
 		//Player.StartItem "Fist";
 		Player.StartItem "Clip", 999;
 		Player.DisplayName "Debug Guy";
@@ -55,6 +55,7 @@ Class DNDebugPlayer : DoomPlayer {
 	
 	States {	
 		MeleeAttack:
+			//TNT1 A 1 A_HideWeap(); 
 			PUNG A 4 A_OverlayOffset(777, 24, 42, WOF_ADD);
 			PUNG B 3 A_OverlayOffset(777, -24, -42, WOF_ADD);
 			PUNG C 2 {
@@ -65,9 +66,31 @@ Class DNDebugPlayer : DoomPlayer {
 			PUNG C 5;
 			PUNG B 6;
 			PUNG B 4 A_OverlayOffset(777, 0, 42, WOF_ADD);
-			//PUNG A 4 A_OverlayOffset(777, 0, -42, WOF_ADD);
+			//TNT1 A 1 A_ReturnWeap();
 			Stop;
 	}
+	
+	
+	action bool A_HideWeap() {
+		StateLabel st = "MeleeHide";
+		DNDWeapon weap = DNDWeapon(player.readyWeapon);
+		if (!weap) {
+			return false;		
+		}
+		weap.SetState(ResolveState(st));		
+		return true;
+	}
+	
+	action bool A_ReturnWeap() {
+		StateLabel st = "MeleeUnhide";
+		DNDWeapon weap = DNDWeapon(player.readyWeapon);
+		if (!weap) {
+			return false;		
+		}
+		weap.SetState(ResolveState(st));
+		return true;
+	}
+	
 	
 	// modified code from weaponfist.zs, written by Graf Zahl (thank you, Graf)
 	action void A_GenMelee() {
