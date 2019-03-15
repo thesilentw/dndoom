@@ -3,5 +3,7 @@
 #include "script/dndweapon.zsc"
 #include "script/playerclasses.zsc"
 #include "script/weapons/zsheckler.zsc"
+#include "script/weapons/testgun.zsc"
+#include "script/weapons/testmelee.zsc"
 #include "script/misc.zsc"
 #include "script/vfx.zsc"
