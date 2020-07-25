@@ -55,7 +55,7 @@ Class TestGun : DNDWeapon {
 			HECP A -1;
 			Stop;
 		Ready:
-			HECK A 1 A_WeaponReady(WRF_ALLOWRELOAD);
+			HECK A 1 A_WeaponReady(WRF_ALLOWRELOAD | WRF_NOBOB);
 			Loop;
 		Select:
 			HECK A 1 A_Raise();

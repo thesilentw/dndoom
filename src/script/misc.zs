@@ -1,11 +1,10 @@
 Class BaseBullet : FastProjectile {	
 	Default {
-		Radius 1;
-		Height 1;
+		Radius 2;
+		Height 4;
 		Scale 0.6;
 		Speed 300;
 		DamageFunction 15;
-		//DamageType "Bullet";
 		ProjectileKickback 200;
 		MissileType "BulletTrail";
 		MissileHeight 8;

@@ -57,22 +57,66 @@ Class DNDebugPlayer : DoomPlayer {
 	
 	States {	
 		MeleeAttack:
-			//TNT1 A 1 A_HideWeap(); 
-			PUNG A 4 A_OverlayOffset(777, 24, 42, WOF_ADD);
-			PUNG B 3 A_OverlayOffset(777, -24, -42, WOF_ADD);
+			//TNT1 A 1 A_MoveWeap(true); 
+			PUNG A 4 A_OverlayOffset(777, 24, 220, WOF_ADD);
+			PUNG B 3 A_OverlayOffset(777, -24, -220, WOF_ADD);
 			PUNG C 2 {
-				A_GenMelee();
-				//Console.printf("WHOOSH THUMP CRUNCH");
+				if (A_GenMelee()) {
+					Console.printf("THUMP CRUNCH");
+				}
+				else {
+					Console.printf("WHOOOPS");
+				}
 			}
 			PUNG D 4;
 			PUNG C 5;
 			PUNG B 6;
-			PUNG B 4 A_OverlayOffset(777, 0, 42, WOF_ADD);
-			//TNT1 A 1 A_ReturnWeap();
+			PUNG B 4 A_OverlayOffset(777, 0, 120, WOF_ADD);
+			//TNT1 A 1 A_MoveWeap(false);
 			Stop;
 	}
 	
+	// modified code from weaponfist.zs / fighterfist.zs 
+	// returns true if target hit, otherwise false
+	//
+	action bool A_GenMelee() {
+		Console.printf("GENERIC MELEE ATTACK!");
+		FTranslatedLineTarget t;
+		
+		int damage = random(10, 20);
+		if (FindInventory("PowerStrength")) {
+			damage *= 10;
+		}
+
+		double ang = angle + Random2[Punch]() * (5.625 / 256);
+		double pitch = AimLineAttack (ang, DEFMELEERANGE, null, 0., ALF_CHECK3D);
+		LineAttack (ang, DEFMELEERANGE, pitch, damage, 'Melee', "BulletPuff", LAF_ISMELEEATTACK, t);
+		// turn to face target
+		if (t.linetarget) {
+			angle = t.angleFromSource;
+			return true;
+		}
+		else { return false; }
+	}
 	
+	/*
+	action void A_MoveWeap(bool doHide)
+    {        
+        if (!player) {
+			return;
+		}
+ 
+		let weap = DNDWeapon(player.readyWeapon);
+        let weapSprite = player.GetPsprite(PSP_WEAPON);
+		
+        if (doHide) {
+			weapSprite.y += 60;
+		}
+		else {
+			weapSprite.y -= 60;
+		}
+		return;
+    }
 	action bool A_HideWeap() {
 		StateLabel st = "MeleeHide";
 		DNDWeapon weap = DNDWeapon(player.readyWeapon);
@@ -92,29 +136,7 @@ Class DNDebugPlayer : DoomPlayer {
 		weap.SetState(ResolveState(st));
 		return true;
 	}
-	
-	
-	// modified code from weaponfist.zs, written by Graf Zahl (thank you, Graf)
-	action void A_GenMelee() {
-		Console.printf("GENERIC MELEE ATTACK!");
-		FTranslatedLineTarget t;
+	*/
 		
-		int damage = random(10, 20);
-		if (FindInventory("PowerStrength")) {
-			damage *= 10;
-		}
-
-		double ang = angle + Random2[Punch]() * (5.625 / 256);
-		double pitch = AimLineAttack (ang, DEFMELEERANGE, null, 0., ALF_CHECK3D);
-		LineAttack (ang, DEFMELEERANGE, pitch, damage, 'Melee', "BulletPuff", LAF_ISMELEEATTACK, t);
-		// turn to face target
-		if (t.linetarget) {
-			angle = t.angleFromSource;
-		}
-	}
-
-	
-	
-	
 }
 //eof
